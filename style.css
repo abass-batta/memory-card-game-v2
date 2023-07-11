@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+img{
+    width: 2rem;
+    height: 2rem;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #6563ff;
+}
+.wrapper{
+    height: 400px;
+    width: 400px;
+    padding: 25px;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
+.cards{
+    border:  2px #6563ff solid;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cards, .card, .view{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    /* border: 2px red solid; */
+}
+
+.frontview{ 
+    background-color: #0000; 
+    border-radius: 7px;
+    /* border: 2px solid blue; */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+
+
+}
+
+.backview{
+    transform: rotateY(90deg);
+    position: absolute;
+    left: 19px;
+    top: 20px;
+
+}
+
+li{
+    cursor: pointer;
+}
+
+/* FRONTVIEW TWIRL
+/* li:hover .frontview{
+    animation: twirl 0.2s ease-in forwards;
+} */
+
+/* BACKVIEW TWIRL
+
+/* li:hover .backview{
+    animation: twirl 0.5s 0.5s ease-out forwards reverse;
+} */
+
+
+.card{
+    height: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 10px);
+    position: relative; 
+}
+
+span{
+    font-size: 40px;
+    color: #6563ff;
+}
+
+/* ANIMATION FOR TWIRL
+
+/* @keyframes twirl {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(90deg);
+    }
+} */
