@@ -41,13 +41,13 @@ function matchCards(img1, img2) {
 }
 function shuffleCard() {
     matched = 0;
-    disableDeck = false;
     cardOne = cardTwo = "";
+    disableDeck = false;
     let arr = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
     arr.sort(() => Math.random() > 0.5 ? 1 : -1);
     cards.forEach((card, i) => {
         card.classList.remove("flip");
-        let imgTag = card.querySelector(".back-view img");
+        let imgTag = card.querySelector("img");
         imgTag.src = `images/img-${arr[i]}.png`;
         card.addEventListener("click", flipCard);
     });
